@@ -36,3 +36,9 @@ The parameters you can set in the script are as follows:
 * showCED: if True the Cumulative Error Distribution curve will be shown along with the AUC score,
 * normalization: 'centers' for inter-pupil distance, 'corners' for inter-ocular distance, 'diagonal' for bounding box diagonal normalization,
 * failureThreshold: the error threshold over which the results are considered to be failures, for inter-ocular distance it should be set to 0.08.
+
+## License
+Please note this code and model only could used for evaluation of the paper submitted to the conference.
+
+## Contact
+If you have any questions or suggestions feel free to contact me at Fortest_iccv2019@hotmail.com
