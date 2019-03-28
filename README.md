@@ -38,7 +38,7 @@ The parameters you can set in the script are as follows:
 * failureThreshold: the error threshold over which the results are considered to be failures, for inter-ocular distance it should be set to 0.08.
 
 ## License
-Please note this code and model only could used for evaluation of the paper submitted to the conference.
+Please note this code and model only allow for the evaluation of the proposed method.
 
 ## Contact
 If you have any questions or suggestions feel free to contact me at fortest_iccv2019@hotmail.com
