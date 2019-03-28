@@ -2,6 +2,7 @@
 
 There are the 129 newly-annotated points in ./data/extraLandmarks.mat and Organ index of each facial curve that used in the experiments of the paper, Organ index is define in ./FCFAN/FCFANtesting.py. You can use this configuration to test the proposed method or generate new annotations (provide landmarks in extraLandmarks.mat and Organ index in FCFANtesting.py) on the mean face by yourself.
 
+## Getting started
 First, you need to make sure you have installed Python 3.5.2. For that purpose we recommend Anaconda, it has all the necessary libraries except:
 
     Theano 1.0.4
