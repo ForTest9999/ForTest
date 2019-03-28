@@ -4,8 +4,8 @@ There are the 129 newly-annotated points in ./data/extraLandmarks.mat and Organ 
 
 First, you need to make sure you have installed Python 3.5.2. For that purpose we recommend Anaconda, it has all the necessary libraries except:
 
-    Theano 0.9.0
-    Lasagne 0.2
+    Theano 1.0.4
+    Lasagne 0.2.dev1
     OpenCV 3.1.0 or newer
     
 The three libraries listed above should be installed for testing the model.
