@@ -31,8 +31,8 @@ then unzip and put them in ./data/images/ folder.
 After all the steps above, just run FCFANtesting.py. 
 
 The parameters you can set in the script are as follows:
-    verbose: if True the script will display the error for each image./
-    showResults: if True it will show the localized landmarks for each image./
-    showCED: if True the Cumulative Error Distribution curve will be shown along with the AUC score./
-    normalization: 'centers' for inter-pupil distance, 'corners' for inter-ocular distance, 'diagonal' for bounding box diagonal normalization./
-    failureThreshold: the error threshold over which the results are considered to be failures, for inter-ocular distance it should be set to 0.08.
+    -verbose: if True the script will display the error for each image,
+    -showResults: if True it will show the localized landmarks for each image,
+    -showCED: if True the Cumulative Error Distribution curve will be shown along with the AUC score,
+    -normalization: 'centers' for inter-pupil distance, 'corners' for inter-ocular distance, 'diagonal' for bounding box diagonal normalization,
+    -failureThreshold: the error threshold over which the results are considered to be failures, for inter-ocular distance it should be set to 0.08.
