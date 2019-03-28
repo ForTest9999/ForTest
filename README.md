@@ -1,6 +1,6 @@
 # ForTest
 
-There are the 129 newly-annotated points in ./data/extraLandmarks.mat and extra Organ index of each facial curve that used in the experiments of the paper, extra Organ index (extraOrgsInd) is define in ./FCFAN/FCFANtesting.py. You can use this configuration to test the proposed method or generate new annotations (provide landmarks in extraLandmarks.mat and Organ index named extraOrgsInd in FCFANtesting.py) on the mean face by yourself.
+There are the 129 newly-annotated points in ./data/extraLandmarks.mat and extra organ index of each facial curve that used in the experiments of the paper. The extra organ index (extraOrgsInd) is define in ./FCFAN/FCFANtesting.py. You can use this configuration to test the proposed method or generate new annotations (please provide landmarks in extraLandmarks.mat and extraOrgsInd in FCFANtesting.py) on the mean face by yourself.
 
 ## Getting started
 First, you need to make sure you have installed Python 3.5.2. For that purpose we recommend Anaconda, it has all the necessary libraries except:
@@ -12,7 +12,7 @@ First, you need to make sure you have installed Python 3.5.2. For that purpose w
 The three libraries listed above should be installed for testing the model.
 
 ## Download model
-The trained model FCFAN.npz in the paper can be downloaded from:
+The trained model FCFAN.npz reported in the paper can be downloaded from:
 https://www.dropbox.com/s/5kxh43cz5xetlzv/FCFAN.npz?dl=0
 To test the proposed method, you should download this trained model and put it in the current folder.
 
@@ -30,10 +30,10 @@ https://www.dropbox.com/s/l40qmucaiskxt7n/w300Set.npz?dl=0
 ## Download original datasets (optional)
 If you want to prepare testing data by yourself, you could download 300W, LFPW, HELEN, AFW and IBUG datasets form:
 https://ibug.doc.ic.ac.uk/resources/facial-point-annotations/
-then unzip and put them in ./data/images/ folder. 
+then unzip and put them in ./data/images/ folder. After that, run TestSetPreparation.py for testing data preparation, which could take a few minutes.
 
 ## Test the model
-After all the steps above, just run FCFANtesting.py. 
+After all of the steps above, just run FCFANtesting.py to test the model.
 
 The parameters you can set in the script are as follows:
 * verbose: if True the script will display the error for each image,
