@@ -262,7 +262,7 @@ class FaceAlignment(object):
         return newShape_final
 
     def processImgWithmoms(self, img, inputLandmarks, extraLandmarks, OrgsInd):
-        # stage 1
+        
         inputImg, transform = self.CropResizeRotate(img, inputLandmarks)
         inputImg = inputImg - self.meanImg
         inputImg = inputImg / self.stdDevImg
@@ -270,84 +270,72 @@ class FaceAlignment(object):
         output_moms1 = self.generate_network_moms1([inputImg])[0][0]
         moms = output_moms1.reshape((-1, 2))
 
-        # Org1
         moms_Org1 = moms[self.OrgInd[0, 0]:self.OrgInd[1, 0], :]
         ref_Org1 = inputLandmarks[self.OrgInd[0, 0]:self.OrgInd[1, 0], :]
         newShape_Org1 = extraLandmarks[OrgsInd[0, 0]:OrgsInd[1, 0], :]
         sigmaV2_Org1 = 36.1889**2
         newShapeDeformed_Org1 = self.flow(moms_Org1, ref_Org1, newShape_Org1, sigmaV2_Org1)
 
-        # Org2
         moms_Org2 = moms[self.OrgInd[0, 1]:self.OrgInd[1, 1], :]
         ref_Org2 = inputLandmarks[self.OrgInd[0, 1]:self.OrgInd[1, 1], :]
         newShape_Org2 = extraLandmarks[OrgsInd[0, 1]:OrgsInd[1, 1], :]
         sigmaV2_Org2 = 32.2242**2
         newShapeDeformed_Org2 = self.flow(moms_Org2, ref_Org2, newShape_Org2, sigmaV2_Org2)
 
-        # Org3
         moms_Org3 = moms[self.OrgInd[0, 2]:self.OrgInd[1, 2], :]
         ref_Org3 = inputLandmarks[self.OrgInd[0, 2]:self.OrgInd[1, 2], :]
         newShape_Org3 = extraLandmarks[OrgsInd[0, 2]:OrgsInd[1, 2], :]
         sigmaV2_Org3 = 11.2157**2
         newShapeDeformed_Org3 = self.flow(moms_Org3, ref_Org3, newShape_Org3, sigmaV2_Org3)
 
-        # Org4
         moms_Org4 = moms[self.OrgInd[0, 3]:self.OrgInd[1, 3], :]
         ref_Org4 = inputLandmarks[self.OrgInd[0, 3]:self.OrgInd[1, 3], :]
         newShape_Org4 = extraLandmarks[OrgsInd[0, 3]:OrgsInd[1, 3], :]
         sigmaV2_Org4 = 11.2157**2
         newShapeDeformed_Org4 = self.flow(moms_Org4, ref_Org4, newShape_Org4, sigmaV2_Org4)
-
-        # Org5
+        
         moms_Org5 = moms[self.OrgInd[0, 4]:self.OrgInd[1, 4], :]
         ref_Org5 = inputLandmarks[self.OrgInd[0, 4]:self.OrgInd[1, 4], :]
         newShape_Org5 = extraLandmarks[OrgsInd[0, 4]:OrgsInd[1, 4], :]
         sigmaV2_Org5 = 7.2351**2
         newShapeDeformed_Org5 = self.flow(moms_Org5, ref_Org5, newShape_Org5, sigmaV2_Org5)
 
-        # Org6
         moms_Org6 = moms[self.OrgInd[0, 5]:self.OrgInd[1, 5], :]
         ref_Org6 = inputLandmarks[self.OrgInd[0, 5]:self.OrgInd[1, 5], :]
         newShape_Org6 = extraLandmarks[OrgsInd[0, 5]:OrgsInd[1, 5], :]
         sigmaV2_Org6 = 6.5614**2
         newShapeDeformed_Org6 = self.flow(moms_Org6, ref_Org6, newShape_Org6, sigmaV2_Org6)
 
-        # Org7
         moms_Org7 = moms[self.OrgInd[0, 6]:self.OrgInd[1, 6], :]
         ref_Org7 = inputLandmarks[self.OrgInd[0, 6]:self.OrgInd[1, 6], :]
         newShape_Org7 = extraLandmarks[OrgsInd[0, 6]:OrgsInd[1, 6], :]
         sigmaV2_Org7 = 6.4939**2
         newShapeDeformed_Org7 = self.flow(moms_Org7, ref_Org7, newShape_Org7, sigmaV2_Org7)
 
-        # Org8
         moms_Org8 = moms[self.OrgInd[0, 7]:self.OrgInd[1, 7], :]
         ref_Org8 = inputLandmarks[self.OrgInd[0, 7]:self.OrgInd[1, 7], :]
         newShape_Org8 = extraLandmarks[OrgsInd[0, 7]:OrgsInd[1, 7], :]
         sigmaV2_Org8 = 6.4939**2
         newShapeDeformed_Org8 = self.flow(moms_Org8, ref_Org8, newShape_Org8, sigmaV2_Org8)
 
-        # Org9
         moms_Org9 = moms[self.OrgInd[0, 8]:self.OrgInd[1, 8], :]
         ref_Org9 = inputLandmarks[self.OrgInd[0, 8]:self.OrgInd[1, 8], :]
         newShape_Org9 = extraLandmarks[OrgsInd[0, 8]:OrgsInd[1, 8], :]
         sigmaV2_Org9 = 12.0824**2
         newShapeDeformed_Org9 = self.flow(moms_Org9, ref_Org9, newShape_Org9, sigmaV2_Org9)
-
-        # Org10
+        
         moms_Org10 = moms[self.OrgInd[0, 9]:self.OrgInd[1, 9], :]
         ref_Org10 = inputLandmarks[self.OrgInd[0, 9]:self.OrgInd[1, 9], :]
         newShape_Org10 = extraLandmarks[OrgsInd[0, 9]:OrgsInd[1, 9], :]
         sigmaV2_Org10 = 7.9841**2
         newShapeDeformed_Org10 = self.flow(moms_Org10, ref_Org10, newShape_Org10, sigmaV2_Org10)
 
-        # Org11
         moms_Org11 = moms[self.OrgInd[0, 10]:self.OrgInd[1, 10], :]
         ref_Org11 = inputLandmarks[self.OrgInd[0, 10]:self.OrgInd[1, 10], :]
         newShape_Org11 = extraLandmarks[OrgsInd[0, 10]:OrgsInd[1, 10], :]
         sigmaV2_Org11 = 9.3308**2
         newShapeDeformed_Org11 = self.flow(moms_Org11, ref_Org11, newShape_Org11, sigmaV2_Org11)
 
-        # Org12
         moms_Org12 = moms[self.OrgInd[0, 11]:self.OrgInd[1, 11], :]
         ref_Org12 = inputLandmarks[self.OrgInd[0, 11]:self.OrgInd[1, 11], :]
         newShape_Org12 = extraLandmarks[OrgsInd[0, 11]:OrgsInd[1, 11], :]
@@ -358,7 +346,6 @@ class FaceAlignment(object):
                                       newShapeDeformed_Org5, newShapeDeformed_Org6, newShapeDeformed_Org7, newShapeDeformed_Org8,
                                       newShapeDeformed_Org9, newShapeDeformed_Org10, newShapeDeformed_Org11, newShapeDeformed_Org12))
 
-        # stage 2
         output_ShapeDeformed_trans = self.generate_network_output1([inputImg])[0][0]
         ShapeDeformed_trans = output_ShapeDeformed_trans.reshape((-1, 2))
         output_moms2 = self.generate_network_moms2([inputImg])[0][0]
@@ -376,73 +363,61 @@ class FaceAlignment(object):
 
         newShapeDeformed_trans = np.dot(newShapeDeformed, A) + t
 
-        # Org1
         moms2_Org1 = moms2[self.OrgInd[0, 0]:self.OrgInd[1, 0], :]
         ref2_Org1 = ShapeDeformed_trans[self.OrgInd[0, 0]:self.OrgInd[1, 0], :]
         newShape2_Org1 = newShapeDeformed_trans[OrgsInd[0, 0]:OrgsInd[1, 0], :]
         newShape2Deformed_Org1 = self.flow(moms2_Org1, ref2_Org1, newShape2_Org1, sigmaV2_Org1)
 
-        # Org2
         moms2_Org2 = moms2[self.OrgInd[0, 1]:self.OrgInd[1, 1], :]
         ref2_Org2 = ShapeDeformed_trans[self.OrgInd[0, 1]:self.OrgInd[1, 1], :]
         newShape2_Org2 = newShapeDeformed_trans[OrgsInd[0, 1]:OrgsInd[1, 1], :]
         newShape2Deformed_Org2 = self.flow(moms2_Org2, ref2_Org2, newShape2_Org2, sigmaV2_Org2)
 
-        # Org3
         moms2_Org3 = moms2[self.OrgInd[0, 2]:self.OrgInd[1, 2], :]
         ref2_Org3 = ShapeDeformed_trans[self.OrgInd[0, 2]:self.OrgInd[1, 2], :]
         newShape2_Org3 = newShapeDeformed_trans[OrgsInd[0, 2]:OrgsInd[1, 2], :]
         newShape2Deformed_Org3 = self.flow(moms2_Org3, ref2_Org3, newShape2_Org3, sigmaV2_Org3)
 
-        # Org4
         moms2_Org4 = moms2[self.OrgInd[0, 3]:self.OrgInd[1, 3], :]
         ref2_Org4 = ShapeDeformed_trans[self.OrgInd[0, 3]:self.OrgInd[1, 3], :]
         newShape2_Org4 = newShapeDeformed_trans[OrgsInd[0, 3]:OrgsInd[1, 3], :]
         newShape2Deformed_Org4 = self.flow(moms2_Org4, ref2_Org4, newShape2_Org4, sigmaV2_Org4)
 
-        # Org5
         moms2_Org5 = moms2[self.OrgInd[0, 4]:self.OrgInd[1, 4], :]
         ref2_Org5 = ShapeDeformed_trans[self.OrgInd[0, 4]:self.OrgInd[1, 4], :]
         newShape2_Org5 = newShapeDeformed_trans[OrgsInd[0, 4]:OrgsInd[1, 4], :]
         newShape2Deformed_Org5 = self.flow(moms2_Org5, ref2_Org5, newShape2_Org5, sigmaV2_Org5)
 
-        # Org6
         moms2_Org6 = moms2[self.OrgInd[0, 5]:self.OrgInd[1, 5], :]
         ref2_Org6 = ShapeDeformed_trans[self.OrgInd[0, 5]:self.OrgInd[1, 5], :]
         newShape2_Org6 = newShapeDeformed_trans[OrgsInd[0, 5]:OrgsInd[1, 5], :]
         newShape2Deformed_Org6 = self.flow(moms2_Org6, ref2_Org6, newShape2_Org6, sigmaV2_Org6)
 
-        # Org7
         moms2_Org7 = moms2[self.OrgInd[0, 6]:self.OrgInd[1, 6], :]
         ref2_Org7 = ShapeDeformed_trans[self.OrgInd[0, 6]:self.OrgInd[1, 6], :]
         newShape2_Org7 = newShapeDeformed_trans[OrgsInd[0, 6]:OrgsInd[1, 6], :]
         newShape2Deformed_Org7 = self.flow(moms2_Org7, ref2_Org7, newShape2_Org7, sigmaV2_Org7)
 
-        # Org8
         moms2_Org8 = moms2[self.OrgInd[0, 7]:self.OrgInd[1, 7], :]
         ref2_Org8 = ShapeDeformed_trans[self.OrgInd[0, 7]:self.OrgInd[1, 7], :]
         newShape2_Org8 = newShapeDeformed_trans[OrgsInd[0, 7]:OrgsInd[1, 7], :]
         newShape2Deformed_Org8 = self.flow(moms2_Org8, ref2_Org8, newShape2_Org8, sigmaV2_Org8)
-
-        # Org9
+        
         moms2_Org9 = moms2[self.OrgInd[0, 8]:self.OrgInd[1, 8], :]
         ref2_Org9 = ShapeDeformed_trans[self.OrgInd[0, 8]:self.OrgInd[1, 8], :]
         newShape2_Org9 = newShapeDeformed_trans[OrgsInd[0, 8]:OrgsInd[1, 8], :]
         newShape2Deformed_Org9 = self.flow(moms2_Org9, ref2_Org9, newShape2_Org9, sigmaV2_Org9)
 
-        # Org10
         moms2_Org10 = moms2[self.OrgInd[0, 9]:self.OrgInd[1, 9], :]
         ref2_Org10 = ShapeDeformed_trans[self.OrgInd[0, 9]:self.OrgInd[1, 9], :]
         newShape2_Org10 = newShapeDeformed_trans[OrgsInd[0, 9]:OrgsInd[1, 9], :]
         newShape2Deformed_Org10 = self.flow(moms2_Org10, ref2_Org10, newShape2_Org10, sigmaV2_Org10)
 
-        # Org11
         moms2_Org11 = moms2[self.OrgInd[0, 10]:self.OrgInd[1, 10], :]
         ref2_Org11 = ShapeDeformed_trans[self.OrgInd[0, 10]:self.OrgInd[1, 10], :]
         newShape2_Org11 = newShapeDeformed_trans[OrgsInd[0, 10]:OrgsInd[1, 10], :]
         newShape2Deformed_Org11 = self.flow(moms2_Org11, ref2_Org11, newShape2_Org11, sigmaV2_Org11)
 
-        # Org12
         moms2_Org12 = moms2[self.OrgInd[0, 11]:self.OrgInd[1, 11], :]
         ref2_Org12 = ShapeDeformed_trans[self.OrgInd[0, 11]:self.OrgInd[1, 11], :]
         newShape2_Org12 = newShapeDeformed_trans[OrgsInd[0, 11]:OrgsInd[1, 11], :]
