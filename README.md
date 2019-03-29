@@ -19,19 +19,19 @@ To test the proposed method, you should download this trained model and put it i
 ## Download prepared testing datasets
 To test the proposed method, you should download the following datasets and put them in the ./data/ folder.
 
-The prepared testing data set common set of 300w public set in the paper can be downloaded from:
+The prepared common set of 300w public testing set employed in the paper can be downloaded from:
 https://www.dropbox.com/s/p2cp3ikxkxjdxpd/commonSet.npz?dl=0.
 
-The prepared testing data set challenging set of 300w public set in the paper can be downloaded from:
+The prepared challenging set of 300w public testing set employed in the paper can be downloaded from:
 https://www.dropbox.com/s/te3klvdj2wz7g2p/challengingSet.npz?dl=0.
 
-The prepared testing data set 300w private set in the paper can be downloaded from:
+The prepared 300w private testing set employed in the paper can be downloaded from:
 https://www.dropbox.com/s/l40qmucaiskxt7n/w300Set.npz?dl=0.
 
 ## Download original datasets (optional)
-If you want to prepare testing data by yourself, you could download 300W, LFPW, HELEN, AFW and IBUG datasets form:
+If you want to prepare testing data by yourself, you could download 300W, LFPW, HELEN, AFW and IBUG datasets from:
 https://ibug.doc.ic.ac.uk/resources/facial-point-annotations/.
-then unzip and put them in ./data/images/ folder. After that, run TestSetPreparation.py for testing data preparation, which could take a few minutes.
+then unzip and put them in ./data/images/ folder. After that, run TestSetPreparation.py to prepare testing data , which could take a few minutes.
 
 ## Test the model
 After all of the steps above, just run FCFANtesting.py to test the model. The resulting annotations are stored in ./300w_Results/ folder.
