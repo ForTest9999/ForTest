@@ -44,7 +44,7 @@ from LandmarkDeformLayer_stage2.LandmarkDeformLayer2_Org12 import LandmarkDeform
 
 
 class FaceAlignment(object):
-    def __init__(self, height, width, nChannels, nStages, n_T, confidenceLayer=False):
+    def __init__(self, height, width, nChannels, nStages, n_T):
         self.landmarkPatchSize = 16
 
         self.data = theano.tensor.tensor4('inputs', dtype=theano.config.floatX)
