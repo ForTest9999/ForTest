@@ -12,7 +12,7 @@ First, you need to make sure you have installed Python 3.5.2. For that purpose w
 The three libraries listed above should be installed for testing the model.
 
 ## Download model
-The trained model FCFAN.npz reported in the paper can be downloaded from:
+The trained model FCFAN.npz that reported in the paper can be downloaded from:
 https://www.dropbox.com/s/5kxh43cz5xetlzv/FCFAN.npz?dl=0
 To test the proposed method, you should download this trained model and put it in the current folder.
 
