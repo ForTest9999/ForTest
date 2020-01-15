@@ -47,4 +47,4 @@ The parameters you can set in the script are as follows:
 Please note this code and model only allow for the evaluation of the proposed method.
 
 ## Contact
-If you have any questions or suggestions feel free to contact me at fortest_cvpr2020@hotmail.com.
+If you have any questions or suggestions feel free to contact me at ForTest_cvpr2020@hotmail.com.
